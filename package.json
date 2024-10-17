@@ -1,8 +1,8 @@
 {
   "type": "module",
-  "name": "videosdk-auth-endpoint-sample",
+  "name": "cobrowsesdk-auth-endpoint-sample",
   "version": "1.0.0",
-  "description": "Generate a Video SDK JWT to join Zoom Video SDK sessions with the Video SDK.",
+  "description": "Generate a Cobrowse SDK JWT to join Zoom Cobrowse SDK sessions.",
   "main": "src/index.js",
   "scripts": {
     "format": "prettier --write src/*.js",

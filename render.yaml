@@ -1,10 +1,10 @@
 services:
   - type: web
-    name: Zoom Video SDK Auth Sample
+    name: Zoom Cobrowse SDK Auth Sample
     runtime: node
     buildCommand: npm install
     startCommand: npm start
-    repo: https://github.com/zoom/videosdk-auth-endpoint-sample
+    repo: https://github.com/zoom/cobrowsesdk-auth-endpoint-sample
     rootDir: .
     plan: free
     envVars:
