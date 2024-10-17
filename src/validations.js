@@ -1,4 +1,4 @@
-import { isStringArray, isValidationError, toStringArray } from './utils.js'
+import { isValidationError } from './utils.js'
 
 /* CURRIED VALIDATORS */
 export const inNumberArray = (allowedNumbers) => (property, value) => {
@@ -60,33 +60,6 @@ export const isRequired = (property, value) => {
     return {
       property,
       reason: `Property required, but not present in request body`
-    }
-  }
-}
-
-export const matchesStringArray = (allowedStrings) => (property, value) => {
-  if (typeof value === 'undefined') return
-
-  if (typeof value !== 'string' && !isStringArray(value)) {
-    return {
-      property,
-      reason: `Value ${value} not allowed, must be of type string or string array`
-    }
-  }
-
-  const arr = toStringArray(value)
-
-  if (arr.length === 0) {
-    return {
-      property,
-      reason: `Property defined, but not value(s) were present`
-    }
-  }
-
-  if (!arr.every((x) => allowedStrings.includes(x))) {
-    return {
-      property,
-      reason: `One or more value(s) not allowed. Got (${arr}), expected (${allowedStrings})`
     }
   }
 }
