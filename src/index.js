@@ -53,7 +53,7 @@ app.post('/', (req, res) => {
   const sHeader = JSON.stringify(oHeader)
   const sPayload = JSON.stringify(oPayload)
   const sdkJWT = KJUR.jws.JWS.sign('HS256', sHeader, sPayload, process.env.ZOOM_VIDEO_SDK_SECRET)
-  return res.json({ signature: sdkJWT })
+  return res.json({ token: sdkJWT })
 })
 
 app.listen(port, () => console.log(`Zoom Cobrowse SDK Auth Endpoint Sample Node.js, listening on port ${port}!`))
