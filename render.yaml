@@ -8,7 +8,7 @@ services:
     rootDir: .
     plan: free
     envVars:
-      - key: ZOOM_VIDEO_SDK_KEY
+      - key: ZOOM_COBROWSE_SDK_KEY
         sync: false
-      - key: ZOOM_VIDEO_SDK_SECRET
+      - key: ZOOM_COBROWSE_SDK_SECRET
         sync: false
