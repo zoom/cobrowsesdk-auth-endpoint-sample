@@ -16,6 +16,7 @@ app.options('*', cors())
 const validator = {
   role: [isRequired, inNumberArray([1, 2])],
   userId: isLengthLessThan(35),
+  userName: isLengthLessThan(35),
   expirationSeconds: isBetween(1800, 172800)
 }
 
@@ -35,10 +36,11 @@ app.post('/', (req, res) => {
     return res.status(400).json({ errors: validationErrors })
   }
 
-  const { role, expirationSeconds, userId } = requestBody
+  const { role, expirationSeconds, userId, userName } = requestBody
 
   const iat = Math.floor(Date.now() / 1000)
   const user_id = userId ?? Math.random().toString(36).substring(2)
+  const user_name = userName ?? user_id
   const exp = expirationSeconds ? iat + expirationSeconds : iat + 60 * 60 * 2
   const oHeader = { alg: 'HS256', typ: 'JWT' }
 
@@ -46,6 +48,7 @@ app.post('/', (req, res) => {
     app_key: process.env.ZOOM_VIDEO_SDK_KEY,
     role_type: role,
     user_id,
+    user_name,
     iat,
     exp
   }

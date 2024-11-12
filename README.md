@@ -46,6 +46,8 @@ Make a POST request to `http://localhost:4000` (or your deployed url) with the f
 | `role`                   | `number` | **Yes**   | - Required <br> - Must equal to `1` or `2`                            |
 | `expirationSeconds`      | `number` | No        | - Must be between `1800` (30 minutes) and `172800` (48 hours) seconds |
 | `userId`                 | `string` | No        | - Please ensure that the user ID is not repeated within a session     |
+| `userName`               | `string` | No        |                                                                       |
+
 > Note: `userId` is required to create a JWT, if not provided a random string will be used.
 
 ### Example Request
@@ -57,7 +59,8 @@ Request Body:
 ```json
 {
   "role": 1,
-  "userId": "user123"
+  "userId": "user123",
+  "userName": "ekaansh"
 }
 ```
 
@@ -104,7 +107,7 @@ ZoomCobrowseSDK.init(settings, function ({ success, session, error }) {
    Example: `https://abc123.provider.com/`
 
 ```bash
-$ curl <YOU_URL> -X POST -d '{  "role": "1",  "userId": "user123"}' -H "Content-Type: application/json"
+$ curl <YOU_URL> -X POST -d '{  "role": "1",  "userId": "user123", "userName": "ekaansh"}' -H "Content-Type: application/json"
 ```
 
    
