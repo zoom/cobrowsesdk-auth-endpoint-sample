@@ -5,13 +5,13 @@
   "logo": "https://avatars1.githubusercontent.com/u/29114944?s=200&v=4",
   "keywords": ["zoom", "cobrowsesdk", "jwt", "node.js", "express"],
   "env": {
-    "ZOOM_VIDEO_SDK_KEY": {
-      "description": "Your Zoom Video SDK Key, found on your Zoom Video SDK app's credentials page",
+    "ZOOM_SDK_KEY": {
+      "description": "Your Zoom SDK Key, found on your Zoom SDK app's credentials page",
       "value": "",
       "required": true
     },
-    "ZOOM_VIDEO_SDK_SECRET": {
-      "description": "Your Zoom Video SDK Secret, found on your Zoom Video SDK app's credentials page",
+    "ZOOM_SDK_SECRET": {
+      "description": "Your Zoom SDK Secret, found on your Zoom SDK app's credentials page",
       "value": "",
       "required": true
     }

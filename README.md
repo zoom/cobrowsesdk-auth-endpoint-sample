@@ -30,7 +30,7 @@ In terminal, run the following command to clone the repository:
 
    `$ npm install`
 
-3. Rename `.env.example` to `.env`, edit the file contents to include your [Zoom Video SDK key and secret](https://developers.zoom.us/docs/video-sdk/get-credentials/), save the file contents, and close the file:
+3. Rename `example.env` to `.env`, edit the file contents to include your Zoom SDK key and secret, save the file contents, and close the file:
 <!-- change url -->
 
 4. Start the server:
@@ -72,7 +72,7 @@ If successful, the response body will be a JSON representation of your token:
 }
 ```
 
-In the [Cobrowse SDK](https://developers.zoom.us/docs/video-sdk/auth/#start-and-join-sessions-with-the-video-sdk-jwt), for the **agent** you can pass in the `token` to the `ACCESS_TOKEN` in your iframe. 
+In the Cobrowse SDK, for the **agent** you can pass in the `token` to the `ACCESS_TOKEN` in your iframe. 
 <!-- change url -->
 
 ```html
@@ -95,14 +95,14 @@ ZoomCobrowseSDK.init(settings, function ({ success, session, error }) {
 
 ### Deploy to a Managed Service
 
-1. After clicking the "Deploy to <Provider\>" button, enter a name for your app (or leave it blank to have a name generated for you), and insert your [Zoom Video SDK credentials](https://developers.zoom.us/docs/video-sdk/get-credentials/):
+1. After clicking the "Deploy to <Provider\>" button, enter a name for your app (or leave it blank to have a name generated for you), and insert your Zoom SDK credentials:
 
-   - `ZOOM_VIDEO_SDK_KEY` (Your Zoom Video SDK Key, found on your Zoom Video SDK App's Credentials page)
-   - `ZOOM_VIDEO_SDK_SECRET` (Your Zoom Video SDK Secret, found on your Zoom Video SDK App's Credentials page)
+   - `ZOOM_SDK_KEY` (Your Zoom  SDK Key, found on your Zoom SDK App's Credentials page)
+   - `ZOOM_SDK_SECRET` (Your Zoom SDK Secret, found on your Zoom SDK App's Credentials page)
 
 1. Then click "Deploy App".
 
-1. Use your URL as your Video SDK Auth Endpoint.
+1. Use your URL as your Cobrowse SDK Auth Endpoint.
 
    Example: `https://abc123.provider.com/`
 
@@ -115,11 +115,11 @@ $ curl <YOU_URL> -X POST -d '{  "role": "1",  "userId": "user123", "userName": "
 
 1. For Other Server Hosting information, see [this tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/deployment#choosing_a_hosting_provider).
 
-1. Use your deployed URL as your Video SDK Auth Endpoint.
+1. Use your deployed URL as your Cobrowse SDK Auth Endpoint.
 
    Example: `https://abc123.compute-1.amazonaws.com/`
 
-Now you can [generate your Video SDK JWT](#usage).
+Now you can [generate your Cobrowse SDK JWT](#usage).
 
 ## Need help?
 

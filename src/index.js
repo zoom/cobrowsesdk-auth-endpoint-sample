@@ -45,7 +45,7 @@ app.post('/', (req, res) => {
   const oHeader = { alg: 'HS256', typ: 'JWT' }
 
   const oPayload = {
-    app_key: process.env.ZOOM_VIDEO_SDK_KEY,
+    app_key: process.env.ZOOM_SDK_KEY,
     role_type: role,
     user_id,
     user_name,
@@ -55,7 +55,7 @@ app.post('/', (req, res) => {
 
   const sHeader = JSON.stringify(oHeader)
   const sPayload = JSON.stringify(oPayload)
-  const sdkJWT = KJUR.jws.JWS.sign('HS256', sHeader, sPayload, process.env.ZOOM_VIDEO_SDK_SECRET)
+  const sdkJWT = KJUR.jws.JWS.sign('HS256', sHeader, sPayload, process.env.ZOOM_SDK_SECRET)
   return res.json({ token: sdkJWT })
 })
 
