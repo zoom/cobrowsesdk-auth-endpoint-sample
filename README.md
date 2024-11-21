@@ -9,7 +9,7 @@ If you would like to skip these steps and just deploy the finished code to a man
 
 | Railway | Render | Heroku |
 |:-:|:-:|:-:|
-| [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/dO2hTU?referralCode=HTPdHX) | [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/zoom/cobrowsesdk-auth-endpoint-sample) | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/zoom/cobrowsesdk-auth-endpoint-sample) | 
+| [![Deploy on Railway](https://railway.com/button.svg)](https://railway.app/template/OjTGvs?referralCode=HTPdHX) | [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/zoom/cobrowsesdk-auth-endpoint-sample) | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/zoom/cobrowsesdk-auth-endpoint-sample) | 
 <!-- change url -->
 
 > Note: Both Railway and Render have free tiers, but Heroku requires a credit card to deploy.
