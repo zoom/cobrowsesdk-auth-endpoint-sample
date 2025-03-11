@@ -47,10 +47,11 @@ app.post('/', (req, res) => {
   const oPayload = {
     app_key: process.env.ZOOM_SDK_KEY,
     role_type: role,
+    enable_byop: 1,
     user_id,
     user_name,
     iat,
-    exp
+    exp,
   }
 
   const sHeader = JSON.stringify(oHeader)
